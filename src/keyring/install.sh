@@ -1,9 +1,40 @@
 #!/bin/sh
 set -e
 
-echo "Install keyring and sagecipher using pipx"
+echo "Running:           $(readlink -f $0)"
+echo "Working directory: $(pwd)"
+echo "Container user:    ${_CONTAINER_USER}"
+echo "Container user home: ${_CONTAINER_USER_HOME}"
+
+
+echo "Installing keyring and sagecipher using pipx"
 
 # install keyring and sagecipher
 # sagecipher lets us use an ssh key as a key for the keyring
-pipx install --include-deps sagecipher  # this also installs keyring
-pipx inject sagecipher setuptools # missing runtime dependency for sagecipher
+su - ${_CONTAINER_USER} <<EOF
+    pipx install --include-deps sagecipher  # this also installs keyring
+    pipx inject sagecipher setuptools       # missing runtime dependency for sagecipher
+EOF
+
+# # configure the keyring
+# KEYRING=sagecipher_pass.cfg
+# WORKSPACEKEYRINGFOLDER=$WORKSPACE/.keyring
+# WORKSPACEKEYRING=$WORKSPACE/.keyring/$KEYRING
+# DEFAULTKEYRINGFOLDER=${_CONTAINER_USER_HOME}/.local/share/python_keyring
+# DEFAULTKEYRING=$DEFAULTKEYRINGFOLDER/$KEYRING
+
+# # create the workspace keyring if it doesn't exist
+# if [ ! -d $WORKSPACEKEYRINGFOLDER ]; then
+#     mkdir -p $WORKSPACEKEYRINGFOLDER
+#     chown ${_CONTAINER_USER} ${WORKSPACEKEYRINGFOLDER}
+# fi
+# if [ ! -f $WORKSPACEKEYRING ]; then
+#     touch $WORKSPACEKEYRING
+#     chown ${_CONTAINER_USER} $WORKSPACEKEYRING
+# fi
+
+# # link the workspace keyring to the default location
+# mkdir -p $DEFAULTKEYRINGFOLDER
+# chown -R ${_CONTAINER_USER} ${_CONTAINER_USER_HOME}
+# rm -f $DEFAULTKEYRING
+# ln -s $WORKSPACEKEYRING $DEFAULTKEYRING 
