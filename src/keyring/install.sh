@@ -6,6 +6,9 @@ echo "Working directory: $(pwd)"
 echo "Container user:    ${_CONTAINER_USER}"
 echo "Container user home: ${_CONTAINER_USER_HOME}"
 
+echo "Installing pipx"
+apt-get -yqq update
+apt-get -yqq install pipx
 
 echo "Installing keyring and sagecipher using pipx"
 
