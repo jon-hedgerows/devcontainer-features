@@ -1,7 +1,7 @@
 
-# Keyring
+# Keyring (keyring)
 
-Install keyring and sagecipher using pipx.
+Install keyring and sagecipher using pipx
 
 ## Example Usage
 
@@ -14,5 +14,11 @@ Install keyring and sagecipher using pipx.
 ## Options
 
 | Options Id | Description | Type | Default Value |
-| ---------- | ----------- | ---- | ------------- |
-| none       |             |      |               |
+|-----|-----|-----|-----|
+
+
+
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/jon-hedgerows/devcontainer-features/blob/main/src/keyring/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
