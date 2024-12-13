@@ -1,0 +1,10 @@
+{
+    "name": "Keyring",
+    "id": "keyring",
+    "version": "1.0.0",
+    "description": "Install keyring and sagecipher using pipx",
+    "options": {},
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/python:1": {}
+    }
+}
