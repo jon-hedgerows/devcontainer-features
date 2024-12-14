@@ -14,10 +14,9 @@ echo "Installing keyring and sagecipher using pipx"
 
 # install keyring and sagecipher
 # sagecipher lets us use an ssh key as a key for the keyring
-su - ${_CONTAINER_USER} <<EOF
-    pipx install --include-deps sagecipher  # this also installs keyring
-    pipx inject sagecipher setuptools       # missing runtime dependency for sagecipher
-EOF
+pipx install --global --include-deps sagecipher  # this also installs keyring
+pipx inject --global sagecipher setuptools       # missing runtime dependency for sagecipher
+
 
 # # configure the keyring
 # KEYRING=sagecipher_pass.cfg
