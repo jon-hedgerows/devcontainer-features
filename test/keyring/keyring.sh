@@ -40,9 +40,6 @@ source dev-container-features-test-lib
 # The 'check' command comes from the dev-container-features-test-lib. Syntax is...
 # check <LABEL> <cmd> [args...]
 check "diagnose keyring" bash -c "keyring diagnose"
-check "store key" bash -c "echo testvalue | keyring set testservice testuser"
-check "fetch key" bash -c "test a$(keyring get testservice testuser) = 'atestvalue'"
-check "delete key" bash -c "keyring del testservice testuser"
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.

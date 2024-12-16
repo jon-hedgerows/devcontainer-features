@@ -1,7 +1,7 @@
 
 # Keyring
 
-Install keyring and sagecipher using pipx.
+Install keyring and sagecipher globally using pip
 
 ## Example Usage
 
