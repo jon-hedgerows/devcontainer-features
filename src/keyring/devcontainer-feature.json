@@ -1,7 +1,7 @@
 {
     "name": "Keyring",
     "id": "keyring",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Install keyring and sagecipher using pip",
     "options": {},
     "dependsOn": {
