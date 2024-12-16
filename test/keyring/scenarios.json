@@ -1,5 +1,5 @@
 {
-    "keyring": {
+    "test": {
         "image": "mcr.microsoft.com/devcontainers/base:noble",
         "features": {
             "keyring": {}
