@@ -4,5 +4,11 @@
         "features": {
             "keyring": {}
         }
+    },
+    "bws": {
+        "image": "mcr.microsoft.com/devcontainers/base:noble",
+        "features": {
+            "bws": {}
+        }
     }
 }
