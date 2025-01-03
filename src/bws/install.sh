@@ -6,9 +6,9 @@ set -x
 
 echo "Installing Bitwarden Secrets Manager CLI"
 
-# we need wget and unzip, so let's just install them
-sudo apt-get -yqq update
-sudo apt-get -yqq install wget unzip
+# we need wget and unzip, so let's naively assume we're running a debian OS and just install them
+apt-get -yqq update
+apt-get -yqq install wget unzip
 
 # source URLs:
 # https://github.com/bitwarden/sdk-sm/releases/download/bws-v1.0.0/bws-aarch64-unknown-linux-gnu-1.0.0.zip
