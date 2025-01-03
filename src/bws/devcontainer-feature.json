@@ -1,0 +1,8 @@
+{
+    "name": "Keyring",
+    "id": "bws",
+    "version": "0.1.0",
+    "description": "Install Bitwarden Secrets CLI",
+    "options": {},
+    "dependsOn": {}
+}
