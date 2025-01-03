@@ -34,6 +34,7 @@ jobs:
       matrix:
         features:
           - keyring
+          - bws
     steps:
       - uses: actions/checkout@v4
 
