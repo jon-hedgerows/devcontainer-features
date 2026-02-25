@@ -13,11 +13,11 @@ This feature provides `bws`, the Bitwarden Secrets CLI, from https://github.com/
 
 ```jsonc
 "features": {
-    "ghcr.io/jon-hedgerows/decontainer-features/bws:1": {}
+    "ghcr.io/jon-hedgerows/decontainer-features/bws:2": {}
 }
 ```
 
-The intent is to keep the feature version aligned with the bws version.  This feature requires an update
+The intent is to keep the feature version aligned with the bws version. This feature requires an update
 each time bws is updated, so any particular version is not guaranteed to be available.
 
 For `bws` help, please see https://bitwarden.com/help/secrets-manager-cli/
@@ -46,7 +46,6 @@ Options:
   -h, --help                         Print help
   -V, --version                      Print version
 ```
-
 
 ### `keyring`
 
