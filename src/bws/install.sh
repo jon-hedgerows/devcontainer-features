@@ -4,7 +4,7 @@ set -x
 
 # install bitwarden secrets CLI from https://github.com/bitwarden/sdk-sm/releases
 
-R="2.1.0"
+R="2.0.0"
 
 echo "Installing Bitwarden Secrets Manager CLI v${R}"
 
